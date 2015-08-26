@@ -68,12 +68,12 @@ class sk_startorder extends plugin_generic
       'long_description'  => $this->user->lang('sk_startorder_long_desc'),
       'homepage'          => EQDKP_PROJECT_URL,
       'manuallink'        => false,
-      'plus_version'      => '2.1',
+      'plus_version'      => '2.0',
       'build'             => $this->build,
     ));
 
     $this->add_dependency(array(
-      'plus_version'      => '2.1'
+      'plus_version'      => '2.0'
     ));
 
 	// -- Menu --------------------------------------------
