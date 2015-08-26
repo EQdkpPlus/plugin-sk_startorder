@@ -1,0 +1,51 @@
+<div class="breadcrumb-container">
+	<ul class="breamcrumb">
+		<li><a href="{EQDKP_CONTROLLER_PATH}{SID}" title="{L_home}"><i class="fa fa-home"></i></a></li>
+		<li><a href="{EQDKP_ROOT_PATH}admin/{SID}">{L_menu_admin_panel}</a>
+		<li class="current"><a>{L_skso_change_order}</a></li>
+	</ul>
+	<div class="clear"></div>
+</div>
+
+<div class="contentHeader">
+	<h1 class="contentTitle">{L_skso_change_order}</h1>
+</div>
+
+<form method="post" action="{ACTION}" name="post">
+<div id="mdkp_tabs">
+	<ul>
+		<!-- BEGIN tab_row -->
+		<li><a href='#tab_{tab_row.ID}'><span>{tab_row.MDKP_NAME}</span></a></li>
+		<!-- END tab_row -->
+	</ul>
+	
+	<!-- BEGIN tab_row -->
+	<div id="tab_{tab_row.ID}">
+		<h2>{tab_row.MDKP_NAME}</h2>
+		
+		<table class="table fullwidth colorswitch" id="profilefield_table">
+		<thead>
+		<tr class="not-sortable">
+			<th width="10px"></th>
+			<th>{L_name}</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- BEGIN member_row -->
+		<tr>
+			<td><span class="ui-icon ui-icon-arrowthick-2-n-s" title="{L_dragndrop}"><input type="hidden" name="sort_{tab_row.ID}[]" value="{tab_row.member_row.ID}"></span></td>
+			<td>{tab_row.member_row.NAME}</td>
+		</tr>
+		<!-- END member_row -->
+		</tbody>
+	</table>
+		
+	</div>
+	<!-- END tab_row -->
+</div>
+
+	<div class="contentFooter">
+		<button class="mainoption" name="upd" type="submit" id="savesort"><i class="fa fa-check"></i>{L_save}</button>
+	</div>
+{CSRF_TOKEN}
+</form>
