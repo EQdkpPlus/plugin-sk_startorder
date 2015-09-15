@@ -41,12 +41,12 @@ class sk_startorder extends plugin_generic
     return array_merge(parent::$shortcuts, $shortcuts);
   }
 
-  public $version    = '1.0.0';
+  public $version    = '1.0.1';
   public $build      = '';
   public $copyright  = 'GodMod';
   public $vstatus    = 'Alpha';
   
-  protected static $apiLevel = 20;
+  protected static $apiLevel = 23;
 
   /**
     * Constructor
@@ -68,12 +68,12 @@ class sk_startorder extends plugin_generic
       'long_description'  => $this->user->lang('sk_startorder_long_desc'),
       'homepage'          => EQDKP_PROJECT_URL,
       'manuallink'        => false,
-      'plus_version'      => '2.0',
+      'plus_version'      => '2.1',
       'build'             => $this->build,
     ));
 
     $this->add_dependency(array(
-      'plus_version'      => '2.0'
+      'plus_version'      => '2.1'
     ));
 
 	// -- Menu --------------------------------------------
