@@ -78,6 +78,8 @@ class SKSOrder extends page_generic
   			}
   		}
   		
+  		$this->pdc->flush();
+  		
   		$this->core->message($this->user->lang('save_suc'), $this->user->lang('success'), 'green');
   }
   
