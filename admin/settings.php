@@ -72,9 +72,9 @@ class SKSOrder extends page_generic
   			$arrSort = $this->in->getArray('sort_'.$mdkp_id, 'int');
 
   			if($strCurrentLayout == 'sk'){
-  				$this->config->set('sk_startlist_'.$mdkp_id, serialize($arrSort));
+  				$this->config->set('sk_startlist_'.$mdkp_id, $arrSort);
   			} else {
-  				$this->config->set('sk_fix_startlist_'.$mdkp_id, serialize($arrSort));
+  				$this->config->set('sk_fix_startlist_'.$mdkp_id, $arrSort);
   			}
   		}
   		
