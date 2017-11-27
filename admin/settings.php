@@ -171,8 +171,13 @@ class SKSOrder extends page_generic
       'page_title'    => $this->user->lang('skso_change_order'),
       'template_path' => $this->pm->get_data('sk_startorder', 'template_path'),
       'template_file' => 'admin/settings.html',
+    		'page_path'			=> [
+    				['title'=>$this->user->lang('menu_admin_panel'), 'url'=>$this->root_path.'admin/'.$this->SID],
+    				['title'=>$this->user->lang('skso_change_order'), 'url'=>' '],
+    		],
       'display'       => true
     ));
+
   }
   
 }
